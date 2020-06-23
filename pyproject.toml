@@ -1,0 +1,15 @@
+[tool.black]
+exclude = '''
+
+(
+    /(
+        \.eggs
+        | \.git
+        | \.mypy_cache
+        | \.venv
+        | build
+        | dist
+        | migrations
+    )/
+)
+'''

@@ -1,0 +1,8 @@
+{% extends 'quilttracker/base.html' %}
+{%block content%}
+<div class="bread_crumb"><a href="{% url 'customers' %}">Customer List</a></div>
+<form method="POST" class="customer-form">{% csrf_token %}
+    {{form.as_table}}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}

@@ -8,27 +8,47 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Customer',
+            name="Customer",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('firstname', models.CharField(max_length=64)),
-                ('lastname', models.CharField(max_length=64)),
-                ('email', models.EmailField(max_length=70, unique=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("firstname", models.CharField(max_length=64)),
+                ("lastname", models.CharField(max_length=64)),
+                ("email", models.EmailField(max_length=70, unique=True)),
             ],
         ),
         migrations.CreateModel(
-            name='Quilt',
+            name="Quilt",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nickname', models.CharField(max_length=64)),
-                ('width', models.IntegerField()),
-                ('length', models.IntegerField()),
-                ('quilter', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='polls.Customer')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nickname", models.CharField(max_length=64)),
+                ("width", models.IntegerField()),
+                ("length", models.IntegerField()),
+                (
+                    "quilter",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT, to="polls.Customer"
+                    ),
+                ),
             ],
         ),
     ]

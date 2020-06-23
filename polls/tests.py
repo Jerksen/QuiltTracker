@@ -25,7 +25,7 @@ class QuestionIndexViewTests(TestCase):
         self.assertQuerysetEqual(
             response.context["latest_questions"], ["<Question: Past Q>"]
         )
-    
+
     def test_future_question(self):
         create_question("Past Q", days=-20)
         create_question("Future Q", days=10)

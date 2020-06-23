@@ -1,0 +1,10 @@
+{% extends 'quilttracker/base.html' %}
+{%block content%}
+<div class="bread_crumb"><a href="{% url 'customers' %}">Customer List</a></div>
+<div class="customer">
+    <div class="customer-header">
+    <h2>{{ customer.first_name }} {{ customer.last_name }}   <a class="btn btn-default" href="{% url 'customer_edit' pk=customer.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h2>
+    </div>
+    <a href="mailto:{{ customer.email }}">{{ customer.email }}</a>
+</div>
+{% endblock %}

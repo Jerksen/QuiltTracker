@@ -1,0 +1,11 @@
+{% extends 'quilttracker/base.html' %}
+{% block content %}
+    <div class="customer_list">
+        <h2>Customers</h2>
+    </div>
+    {% for customer in  customers %}
+    <div>
+        <a href="{% url 'customer_detail' pk=customer.pk %}">{{ customer }}</a>
+    </div>
+    {% endfor %}
+{% endblock %}

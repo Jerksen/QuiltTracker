@@ -1,0 +1,21 @@
+{% load static %}
+<head>
+    <title>Quilt Tracker 2000</title> 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'quilttracker/style.css' %}">
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">Quilt Tracker 2000</a></h1>
+        <a href="{% url 'customer_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    </div>
+    <div class="content-container">
+        <div class="row"> 
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
